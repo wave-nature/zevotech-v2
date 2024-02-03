@@ -1,16 +1,15 @@
-<!DOCTYPE html>
 <html lang="en">
   <!-- Mirrored from ai-tool-tailwind.preview.uideck.com/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 27 Jan 2024 10:31:38 GMT -->
   <!-- Added by HTTrack --><meta
     http-equiv="content-type"
-    content="text/html;charset=utf-8"
+    content="index/html;charset=utf-8"
   /><!-- /Added by HTTrack -->
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AI Tool - Tailwind CSS Template for AI Tools</title>
-    <link rel="icon" href="favicon.ico" />
+    <title>Zevotech | Home</title>
+    <link rel="icon" href="/images/logo-dark.ico" />
     <link href="style.css" rel="stylesheet" />
   </head>
   <body
@@ -26,7 +25,7 @@
       >
         <div class="w-full lg:w-1/4 flex items-center justify-between">
           <a href="index.html">
-            <img src="images/logo.svg" alt="Logo" />
+            <img src="images/logo-dark.png" alt="Logo" style="height: 50px" />
           </a>
 
           <button
@@ -85,9 +84,9 @@
                 :class="{ 'lg:!py-4' : stickyMenu }"
               >
                 <a
-                  href="index.html#features"
+                  href="index.html#services"
                   class="relative text-white/80 text-sm py-1.5 px-4 border border-transparent hover:text-white hover:nav-gradient"
-                  >Features</a
+                  >Services</a
                 >
               </li>
               <li
@@ -95,116 +94,40 @@
                 :class="{ 'lg:!py-4' : stickyMenu }"
               >
                 <a
-                  href="index.html#pricing"
+                  href="index.html#projects"
                   class="relative text-white/80 text-sm py-1.5 px-4 border border-transparent hover:text-white hover:nav-gradient"
-                  >Pricing</a
+                  >Projects</a
                 >
               </li>
               <li
-                class="group relative lg:py-7"
+                class="nav__menu lg:py-7"
                 :class="{ 'lg:!py-4' : stickyMenu }"
-                x-data="{ dropdown: false }"
               >
                 <a
-                  href="#"
-                  class="relative text-white/80 text-sm py-1.5 px-4 border border-transparent hover:text-white hover:nav-gradient flex items-center justify-between gap-3"
-                  @click.prevent="dropdown = !dropdown"
-                  :class="{ '!text-white nav-gradient': page === 'about' || page === 'pricing' || page === 'blog-grid' || page === 'blog-single' || page === 'signin' || page === 'signup' || page === '404' }"
+                  href="index.html"
+                  class="relative text-white/80 text-sm py-1.5 px-4 border border-transparent hover:text-white hover:nav-gradient"
+                  >About Us</a
                 >
-                  Pages
-                  <svg
-                    class="fill-current w-3 h-3 cursor-pointer"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 512 512"
-                  >
-                    <path
-                      d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z"
-                    />
-                  </svg>
-                </a>
+              </li>
 
-                <ul class="dropdown" :class="{ 'flex': dropdown }">
-                  <li>
-                    <a
-                      href="about.html"
-                      class="flex text-sm text-white/70 hover:text-white py-2 px-4 rounded-md hover:bg-white/5"
-                      :class="{ '!text-white bg-white/5': page === 'about' }"
-                      >About Us</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="pricing.html"
-                      class="flex text-sm text-white/70 hover:text-white py-2 px-4 rounded-md hover:bg-white/5"
-                      :class="{ '!text-white bg-white/5': page === 'pricing' }"
-                      >Pricing Table</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="blog-grid.html"
-                      class="flex text-sm text-white/70 hover:text-white py-2 px-4 rounded-md hover:bg-white/5"
-                      :class="{ '!text-white bg-white/5': page === 'blog-grid' }"
-                      >Blog Grid</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="blog-single.html"
-                      class="flex text-sm text-white/70 hover:text-white py-2 px-4 rounded-md hover:bg-white/5"
-                      :class="{ '!text-white bg-white/5': page === 'blog-single' }"
-                      >Blog Single</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="signin.html"
-                      class="flex text-sm text-white/70 hover:text-white py-2 px-4 rounded-md hover:bg-white/5"
-                      :class="{ '!text-white bg-white/5': page === 'signin' }"
-                      >Sign In</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="signup.html"
-                      class="flex text-sm text-white/70 hover:text-white py-2 px-4 rounded-md hover:bg-white/5"
-                      :class="{ '!text-white bg-white/5': page === 'signup' }"
-                      >Sign Up</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="404.html"
-                      class="flex text-sm text-white/70 hover:text-white py-2 px-4 rounded-md hover:bg-white/5"
-                      :class="{ '!text-white bg-white/5': page === '404' }"
-                      >Error Page</a
-                    >
-                  </li>
-                </ul>
-              </li>
               <li
                 class="nav__menu lg:py-7"
                 :class="{ 'lg:!py-4' : stickyMenu }"
               >
                 <a
-                  href="index.html#support"
+                  href="index.html#contact"
                   class="relative text-white/80 text-sm py-1.5 px-4 border border-transparent hover:text-white hover:nav-gradient"
-                  >Support</a
+                  >Contact Us</a
                 >
               </li>
             </ul>
           </nav>
           <div class="flex items-center gap-6 mt-7 lg:mt-0">
             <a
-              href="signin.html"
-              class="text-white text-sm hover:text-opacity-75"
-              >Sign in</a
-            >
-            <a
-              href="signup.html"
+              href="index.html#contact"
               class="button-border-gradient relative rounded-lg text-white text-sm flex items-center gap-1.5 py-2 px-4.5 shadow-button hover:button-gradient-hover hover:shadow-none"
             >
-              Sign up
+              Let's Talk
               <svg
                 class="mt-0.5"
                 width="16"
@@ -262,9 +185,9 @@
             <h1
               class="text-white mb-6 text-3xl font-extrabold sm:text-5xl xl:text-heading-1"
             >
-              Elevate Your Content with Our AI-Powered Writing Tool
+              Revolutionizing Your Brand's Online Presence
             </h1>
-            <p class="max-w-[500px] mx-auto mb-9 font-medium md:text-lg">
+            <p class="hidden max-w-[500px] mx-auto mb-9 font-medium md:text-lg">
               Highly customizable Tailwind CSS template for AI - Tool, Startup,
               Software, App and Product Sites. Comes with everything you need -
               pages, features, sections, components and more that you can easily
@@ -274,7 +197,7 @@
               href="#"
               class="hero-button-gradient inline-flex rounded-lg py-3 px-7 text-white font-medium ease-in duration-300 hover:opacity-80"
             >
-              Start Your Free Trial
+              Let's Build Our Dream
             </a>
           </div>
         </div>
@@ -283,6 +206,7 @@
         </div>
       </section>
 
+      <!-- stats -->
       <section
         id="features"
         class="overflow-hidden pt-17.5 lg:pt-22.5 xl:pt-27.5 scroll-mt-17"
@@ -293,17 +217,15 @@
               class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
             >
               <img src="images/icon-title.svg" alt="icon" />
-              <span class="hero-subtitle-text"> Some of Main Features </span>
+              <span class="hero-subtitle-text"> Our roadmap </span>
             </span>
             <h2
               class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
             >
-              Key Features of Our Tool
+              How We Have Helped Businesses Grow
             </h2>
             <p class="max-w-[714px] mx-auto mb-5 font-medium">
-              Our AI writing tool is designed to empower you with exceptional
-              writing capabilities, making the writing process more efficient,
-              accurate, and enjoyable.
+              With Our Skillset & Passion We Have Reached:
             </p>
           </div>
           <div class="relative">
@@ -328,12 +250,9 @@
                     <img src="images/icon-01.svg" alt="icon" />
                   </span>
                   <h4 class="font-semibold text-lg text-white mb-4">
-                    Intelligent Writing Assistance
+                    500,000$ +
                   </h4>
-                  <p class="font-medium">
-                    Our AI writing tool analyzes your content, suggests
-                    improvements,
-                  </p>
+                  <p class="font-medium">In Client Revenue</p>
                 </div>
               </div>
 
@@ -350,11 +269,9 @@
                     <img src="images/icon-02.svg" alt="icon" />
                   </span>
                   <h4 class="font-semibold text-lg text-white mb-4">
-                    Grammar and Spell Check
+                    300-500% +
                   </h4>
-                  <p class="font-medium">
-                    Say goodbye to embarrassing typos and grammar mistakes
-                  </p>
+                  <p class="font-medium">Business Efficiency</p>
                 </div>
               </div>
 
@@ -371,12 +288,9 @@
                     <img src="images/icon-03.svg" alt="icon" />
                   </span>
                   <h4 class="font-semibold text-lg text-white mb-4">
-                    Plagiarism Detection
+                    Created 200+
                   </h4>
-                  <p class="font-medium">
-                    Originality is key, and our AI writing tool helps you
-                    maintain it
-                  </p>
+                  <p class="font-medium">Business Websites</p>
                 </div>
               </div>
             </div>
@@ -396,55 +310,9 @@
                     <img src="images/icon-04.svg" alt="icon" />
                   </span>
                   <h4 class="font-semibold text-lg text-white mb-4">
-                    Voice to Text Conversion
+                    Infinite %
                   </h4>
-                  <p class="font-medium">
-                    Transform your spoken words into written text easily &
-                    effortlessly
-                  </p>
-                </div>
-              </div>
-
-              <div class="w-full sm:w-1/2 lg:w-1/3">
-                <div
-                  class="group relative overflow-hidden text-center py-8 sm:py-10 xl:py-15 px-4 lg:px-8 xl:px-13"
-                >
-                  <span
-                    class="group-hover:opacity-100 opacity-0 features-bg absolute w-full h-full left-0 top-0 -z-1 rotate-180"
-                  ></span>
-                  <span
-                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
-                  >
-                    <img src="images/icon-05.svg" alt="icon" />
-                  </span>
-                  <h4 class="font-semibold text-lg text-white mb-4">
-                    Style and Tone Adaptation
-                  </h4>
-                  <p class="font-medium">
-                    Whether you need a professional, or positive tone it has
-                    everyone
-                  </p>
-                </div>
-              </div>
-
-              <div class="w-full sm:w-1/2 lg:w-1/3">
-                <div
-                  class="group relative overflow-hidden text-center py-8 sm:py-10 xl:py-15 px-4 lg:px-8 xl:px-13"
-                >
-                  <span
-                    class="group-hover:opacity-100 opacity-0 features-bg absolute w-full h-full left-0 top-0 -z-1 rotate-180"
-                  ></span>
-                  <span
-                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
-                  >
-                    <img src="images/icon-06.svg" alt="icon" />
-                  </span>
-                  <h4 class="font-semibold text-lg text-white mb-4">
-                    Content Generation
-                  </h4>
-                  <p class="font-medium">
-                    Need inspiration or assistance with generating content?
-                  </p>
+                  <p class="font-medium">Increase in Brand Value</p>
                 </div>
               </div>
             </div>
@@ -452,7 +320,163 @@
         </div>
       </section>
 
-      <section class="pt-12.5">
+      <!-- what we do -->
+      <section
+        id="features"
+        class="overflow-hidden pt-17.5 lg:pt-22.5 xl:pt-27.5 scroll-mt-17"
+      >
+        <div class="max-w-[1222px] mx-auto px-4 sm:px-8 xl:px-0">
+          <div class="wow fadeInUp text-center">
+            <span
+              class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
+            >
+              <img src="images/icon-title.svg" alt="icon" />
+              <span class="hero-subtitle-text"> design-code-deliver </span>
+            </span>
+            <h2
+              class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
+            >
+              What We Do
+            </h2>
+            <p class="max-w-[714px] mx-auto mb-5 font-medium">
+              From imagination to reality
+            </p>
+          </div>
+          <div class="relative">
+            <div
+              class="features-row-border rotate-90 w-1/2 h-[1px] absolute top-1/2 left-1/2 -translate-y-1/2 lg:-translate-x-1/3 lg:left-1/4 hidden lg:block"
+            ></div>
+            <div
+              class="features-row-border rotate-90 w-1/2 h-[1px] absolute top-1/2 right-1/2 -translate-y-1/2 lg:right-[8.3%] hidden lg:block"
+            ></div>
+
+            <div class="flex flex-wrap justify-center">
+              <div class="w-full sm:w-1/2 lg:w-1/3">
+                <div
+                  class="group relative overflow-hidden text-center py-8 sm:py-10 xl:py-15 px-4 lg:px-8 xl:px-13"
+                >
+                  <span
+                    class="group-hover:opacity-100 opacity-0 features-bg absolute w-full h-full left-0 top-0 -z-1"
+                  ></span>
+                  <span
+                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
+                  >
+                    <img src="images/design.svg" alt="icon" />
+                  </span>
+                  <h4 class="font-semibold text-lg text-white mb-4">Design</h4>
+                  <p class="font-medium">Sketch Idea</p>
+                </div>
+              </div>
+
+              <div class="w-full sm:w-1/2 lg:w-1/3">
+                <div
+                  class="group relative overflow-hidden text-center py-8 sm:py-10 xl:py-15 px-4 lg:px-8 xl:px-13"
+                >
+                  <span
+                    class="group-hover:opacity-100 opacity-0 features-bg absolute w-full h-full left-0 top-0 -z-1"
+                  ></span>
+                  <span
+                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
+                  >
+                    <img src="images/develop.svg" alt="icon" />
+                  </span>
+                  <h4 class="font-semibold text-lg text-white mb-4">Develop</h4>
+                  <p class="font-medium">Code Idea</p>
+                </div>
+              </div>
+
+              <div class="w-full sm:w-1/2 lg:w-1/3">
+                <div
+                  class="group relative overflow-hidden text-center py-8 sm:py-10 xl:py-15 px-4 lg:px-8 xl:px-13"
+                >
+                  <span
+                    class="group-hover:opacity-100 opacity-0 features-bg absolute w-full h-full left-0 top-0 -z-1"
+                  ></span>
+                  <span
+                    class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-8 mx-auto"
+                  >
+                    <img src="images/deliver.svg" alt="icon" />
+                  </span>
+                  <h4 class="font-semibold text-lg text-white mb-4">Deliver</h4>
+                  <p class="font-medium">Spread Idea</p>
+                </div>
+              </div>
+            </div>
+            <div class="features-row-border w-full h-[1px]"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- what we use -->
+
+      <section
+        id="services"
+        class="overflow-hidden pt-17.5 lg:pt-22.5 xl:pt-27.5 scroll-mt-17"
+      >
+        <div class="max-w-[1222px] mx-auto px-4 sm:px-8 xl:px-0">
+          <div class="wow fadeInUp text-center">
+            <span
+              class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
+            >
+              <img src="images/icon-title.svg" alt="icon" />
+              <span class="hero-subtitle-text"> Trendy Tech </span>
+            </span>
+            <h2
+              class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
+            >
+              What We Use
+            </h2>
+            <p class="max-w-[714px] mx-auto mb-5 font-medium">
+              Trendy technologies to make your business stand out
+            </p>
+          </div>
+          <div class="relative">
+            <div
+              class="features-row-border rotate-90 w-1/2 h-[1px] absolute top-1/2 left-1/2 -translate-y-1/2 lg:-translate-x-1/3 lg:left-1/4 hidden lg:block"
+            ></div>
+            <div
+              class="features-row-border rotate-90 w-1/2 h-[1px] absolute top-1/2 right-1/2 -translate-y-1/2 lg:right-[8.3%] hidden lg:block"
+            ></div>
+
+            <div class="relative">
+              <div
+                class="absolute top-1/2 left-1/2"
+                style="transform: translate(-50%, -50%)"
+              >
+                <img src="/images/logo-dark.png" style="height: 40px" />
+              </div>
+              <img src="/images/tech.svg" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="features"
+        class="overflow-hidden pt-17.5 lg:pt-22.5 xl:pt-27.5 scroll-mt-17"
+      >
+        <div class="max-w-[1222px] mx-auto px-4 sm:px-8 xl:px-0">
+          <div class="wow fadeInUp text-center">
+            <span
+              class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
+            >
+              <img src="images/icon-title.svg" alt="icon" />
+              <span class="hero-subtitle-text"> Some of Main Features </span>
+            </span>
+            <h2
+              class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
+            >
+              Our Projects
+            </h2>
+            <p class="max-w-[714px] mx-auto mb-5 font-medium">
+              We have already converted your ideas into reality
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- projects -->
+      <section id="projects" class="pt-12.5">
         <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
           <div class="grid sm:grid-cols-12 gap-7.5" data-highlighter>
             <div class="sm:col-span-12">
@@ -467,19 +491,20 @@
                       >
                         <img src="images/icon-title.svg" alt="icon" />
                         <span class="hero-subtitle-text">
-                          AI-Powered Writing Tool
+                          AI-Powered Application
                         </span>
                       </span>
                       <h3 class="text-white mb-4.5 font-bold text-heading-4">
-                        Intelligent Writing Assistance
+                        E-commerce application
                       </h3>
                       <p class="font-medium mb-10">
-                        Our AI writing tool is designed to empower you with
-                        exceptional writing capabilities, making the writing
-                        process...
+                        With complex CMS and CRM integrations, we have developed
+                        a robust e-commerce application that is capable of
+                        handling a large number of products and transactions.
                       </p>
                       <a
-                        href="#"
+                        href="https://our-watch.vercel.app/"
+                        target="_blank"
                         class="features-button-gradient relative inline-flex items-center gap-1.5 rounded-full py-3 px-6 text-white text-sm ease-in duration-300 hover:shadow-button"
                       >
                         Learn more
@@ -498,7 +523,7 @@
                       </a>
                     </div>
                     <div class="max-w-[428px] w-full hidden sm:block">
-                      <img src="images/big-icon.svg" alt="icon" />
+                      <img src="images/project-ecom.png" alt="icon" />
                     </div>
                   </div>
 
@@ -544,110 +569,88 @@
               </div>
             </div>
 
-            <div class="sm:col-span-7">
+            <div class="sm:col-span-12">
               <div class="relative rounded-3xl features-box-border">
                 <div
-                  class="relative overflow-hidden rounded-3xl px-11 pt-12.5 pb-14 box-hover box-hover-small"
+                  class="relative overflow-hidden rounded-3xl p-10 xl:p-15 box-hover"
                 >
-                  <div class="relative z-20">
-                    <span
-                      class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-13.5 mx-auto"
-                    >
-                      <img src="images/icon-05.svg" alt="icon" />
-                    </span>
-                    <h3 class="text-white mb-4.5 font-semibold text-heading-6">
-                      Empowering Writing Excellence
-                    </h3>
-                    <p class="font-medium">
-                      Our AI writing tool is designed to empower you with
-                      exceptional writing capabilities, making the writing
-                      process...
-                    </p>
+                  <div class="flex items-center justify-between relative z-20">
+                    <div class="max-w-[477px] w-full">
+                      <span
+                        class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
+                      >
+                        <img src="images/icon-title.svg" alt="icon" />
+                        <span class="hero-subtitle-text">
+                          AI-Powered Application
+                        </span>
+                      </span>
+                      <h3 class="text-white mb-4.5 font-bold text-heading-4">
+                        E-commerce application
+                      </h3>
+                      <p class="font-medium mb-10">
+                        With complex CMS and CRM integrations, we have developed
+                        a robust e-commerce application that is capable of
+                        handling a large number of products and transactions.
+                      </p>
+                      <a
+                        href="https://our-watch.vercel.app/"
+                        target="_blank"
+                        class="features-button-gradient relative inline-flex items-center gap-1.5 rounded-full py-3 px-6 text-white text-sm ease-in duration-300 hover:shadow-button"
+                      >
+                        Learn more
+                        <svg
+                          width="14"
+                          height="12"
+                          viewBox="0 0 14 12"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            d="M13.3992 5.60002L8.22422 0.350024C7.99922 0.125024 7.64922 0.125024 7.42422 0.350024C7.19922 0.575024 7.19922 0.925025 7.42422 1.15002L11.6242 5.42503H0.999219C0.699219 5.42503 0.449219 5.67502 0.449219 5.97502C0.449219 6.27502 0.699219 6.55003 0.999219 6.55003H11.6742L7.42422 10.875C7.19922 11.1 7.19922 11.45 7.42422 11.675C7.52422 11.775 7.67422 11.825 7.82422 11.825C7.97422 11.825 8.12422 11.775 8.22422 11.65L13.3992 6.40002C13.6242 6.17502 13.6242 5.82502 13.3992 5.60002Z"
+                            fill="white"
+                          />
+                        </svg>
+                      </a>
+                    </div>
+                    <div class="max-w-[428px] w-full hidden sm:block">
+                      <img src="images/project-ecom.png" alt="icon" />
+                    </div>
                   </div>
 
                   <div
-                    class="absolute -z-10 pointer-events-none inset-0 overflow-hidden"
+                    class="absolute -z-10 pointer-events-none inset-0 overflow-hidden -mx-28"
                   >
-                    <span class="absolute left-0 bottom-0">
+                    <span class="absolute right-0 bottom-0"
+                      ><img src="images/shape-01.png" alt="shape"
+                    /></span>
+                    <span class="absolute left-0 top-0"
+                      ><img src="images/shape-02.svg" alt="shape"
+                    /></span>
+                    <span class="absolute left-1/2 -translate-x-1/2 bottom-0">
                       <img
-                        src="images/blur-06.svg"
+                        src="images/blur-03.svg"
+                        alt="blur"
+                        class="max-w-none"
+                      />
+                    </span>
+                    <span class="absolute left-1/2 -translate-x-1/2 bottom-0">
+                      <img
+                        src="images/blur-04.svg"
+                        alt="blur"
+                        class="max-w-none"
+                      />
+                    </span>
+                    <span class="absolute left-1/2 -translate-x-1/2 bottom-0">
+                      <img
+                        src="images/blur-05.svg"
                         alt="blur"
                         class="max-w-none"
                       />
                     </span>
                     <span class="absolute right-0 top-0">
                       <img
-                        src="images/blur-07.svg"
-                        alt="blur"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute right-[16%] top-[16%]"
-                      ><img src="images/shape-04.svg" alt="shape"
-                    /></span>
-                    <span class="absolute left-0 bottom-0">
-                      <img
-                        src="images/blur-08.svg"
-                        alt="blur"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute left-0 bottom-0">
-                      <img
-                        src="images/blur-09.svg"
-                        alt="blur"
-                        class="max-w-none"
-                      />
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="sm:col-span-5">
-              <div class="relative rounded-3xl features-box-border">
-                <div
-                  class="relative overflow-hidden rounded-3xl px-11 pt-12.5 pb-14 box-hover box-hover-small"
-                >
-                  <div class="relative z-20">
-                    <span
-                      class="icon-border relative max-w-[80px] w-full h-20 rounded-full inline-flex items-center justify-center mb-13.5 mx-auto"
-                    >
-                      <img src="images/icon-07.svg" alt="icon" />
-                    </span>
-                    <h3 class="text-white mb-4.5 font-semibold text-heading-6">
-                      Grammar and Spell Check
-                    </h3>
-                    <p class="font-medium">
-                      Our AI writing tool is designed to empower you with
-                      exceptional writing capabilities.
-                    </p>
-                  </div>
-
-                  <div
-                    class="absolute -z-10 pointer-events-none inset-0 overflow-hidden"
-                  >
-                    <span class="absolute right-[14%] top-[17%]"
-                      ><img src="images/shape-05.svg" alt="shape"
-                    /></span>
-                    <span class="absolute left-0 bottom-0">
-                      <img
-                        src="images/blur-10.svg"
-                        alt="blur"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute top-0 right-0">
-                      <img
-                        src="images/blur-11.svg"
-                        alt="blur"
-                        class="max-w-none"
-                      />
-                    </span>
-                    <span class="absolute top-0 right-0">
-                      <img
-                        src="images/blur-12.svg"
-                        alt="blur"
+                        src="images/shape-03.svg"
+                        alt="shape"
                         class="max-w-none"
                       />
                     </span>
@@ -661,7 +664,7 @@
 
       <section
         id="pricing"
-        class="relative z-20 overflow-hidden pt-22.5 lg:pt-27.5 xl:pt-32.5 scroll-mt-17"
+        class="relative hidden z-20 overflow-hidden pt-22.5 lg:pt-27.5 xl:pt-32.5 scroll-mt-17"
       >
         <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
           <div class="relative top-18">
@@ -1927,7 +1930,7 @@
             <span
               class="max-w-[128px] w-full h-[37px] block inset-0 pointer-events-none absolute z-10 left-auto top-1/2 -translate-y-1/2 bg-gradient-to-r from-dark/0 to-dark/100"
             ></span>
-            <div class="swiper clients-carousel">
+            <div class="swiper clients-carousel" style="height: 50px">
               <div class="swiper-wrapper items-center select-none !ease-linear">
                 <div class="swiper-slide !w-auto">
                   <a href="index.html#">
@@ -2040,7 +2043,7 @@
         </div>
       </section>
 
-      <section id="support" class="scroll-mt-17">
+      <section id="contact" class="scroll-mt-17">
         <div class="max-w-[1104px] mx-auto px-4 sm:px-8 xl:px-0">
           <div
             class="relative z-999 overflow-hidden rounded-[30px] bg-dark pt-25 px-4 sm:px-20 lg:px-27.5"
@@ -2103,24 +2106,23 @@
                 class="hero-subtitle-gradient relative mb-4 font-medium text-sm inline-flex items-center gap-2 py-2 px-4.5 rounded-full"
               >
                 <img src="images/icon-title.svg" alt="icon" />
-                <span class="hero-subtitle-text"> Need Any Help? </span>
+                <span class="hero-subtitle-text"> Let's connect! </span>
               </span>
               <h2
                 class="text-white mb-4.5 text-2xl font-extrabold sm:text-4xl xl:text-heading-2"
               >
-                Contact With Us
+                Let’s Get Working
               </h2>
               <p class="max-w-[714px] mx-auto font-medium">
-                Our AI writing tool is designed to empower you with exceptional
-                writing capabilities, making the writing process more efficient,
-                accurate, and enjoyable.
+                We thrive to be best web agency on the internet, providing you
+                worthy and powerful web solutions.
               </p>
             </div>
 
             <div
               class="form-box-gradient relative overflow-hidden rounded-[25px] bg-dark p-6 sm:p-8 xl:p-15"
             >
-              <form class="relative z-10">
+              <form class="relative z-10" id="contact-form">
                 <div class="-mx-4 xl:-mx-10 flex flex-wrap">
                   <div class="w-full px-4 xl:px-5 md:w-1/2">
                     <div class="mb-9.5">
@@ -2175,12 +2177,13 @@
                   </div>
                   <div class="w-full px-4 xl:px-5">
                     <div class="text-center">
-                      <a
-                        href="#"
+                      <button
+                        type="button"
                         class="hero-button-gradient inline-flex rounded-lg py-3 px-7 text-white font-medium ease-in duration-300 hover:opacity-80"
+                        id="send-message"
                       >
                         Send Message
-                      </a>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -2233,7 +2236,7 @@
               </div>
               <h4>
                 <a
-                  href="blog-single.html"
+                  href="index.html"
                   class="text-white font-semibold text-xl ease-in duration-300 hover:opacity-80"
                 >
                   Revolution in Content Creation and Communication
@@ -2310,7 +2313,7 @@
               </div>
               <h4>
                 <a
-                  href="blog-single.html"
+                  href="index.html"
                   class="text-white font-semibold text-xl ease-in duration-300 hover:opacity-80"
                 >
                   How AI Writing Tools Empower Writers to Speed up there Writing
@@ -2387,7 +2390,7 @@
               </div>
               <h4>
                 <a
-                  href="blog-single.html"
+                  href="index.html"
                   class="text-white font-semibold text-xl ease-in duration-300 hover:opacity-80"
                 >
                   Revolution in Content Creation and Communication
@@ -2445,7 +2448,8 @@
         </div>
       </section>
 
-      <section>
+      <!-- hidden -->
+      <section class="hidden">
         <div class="max-w-[1170px] mx-auto px-4 sm:px-8 xl:px-0">
           <div
             class="cta-box-gradient bg-dark rounded-[30px] relative overflow-hidden px-4 py-20 lg:py-25 z-999"
@@ -2559,14 +2563,26 @@
         <div class="flex flex-wrap justify-between">
           <div class="mb-10 max-w-[571px] w-full">
             <a class="mb-8.5 inline-block" href="index.html">
-              <img src="images/logo.svg" alt="Logo" />
+              <img src="images/logo-dark.png" alt="Logo" style="height: 50px" />
             </a>
             <p class="mb-12 xl:w-4/5">
-              AI writing tool is designed to empower you with exceptional
-              writing capabilities.
+              Revolutionizing Your Brand's Online Presence
             </p>
-            <div class="flex items-center gap-5">
-              <a href="#" class="hover:text-white ease-in duration-300">
+
+            <a href="tel:+91 99772 01802" class="xl:w-4/5 mb-3 inline-block"
+              >Phone: +91 99772 01802</a
+            >
+            <a
+              href="mailto:hello@zevotech.co"
+              class="mb-12 xl:w-4/5 inline-block"
+              >Email: hello@zevotech.co</a
+            >
+            <div class="flex gap-5" style="align-items: center">
+              <a
+                href="https://www.facebook.com/profile.php?id=61555331789967"
+                target="_blank"
+                class="hover:text-white ease-in duration-300"
+              >
                 <svg
                   class="fill-current"
                   width="24"
@@ -2581,22 +2597,61 @@
                   />
                 </svg>
               </a>
-              <a href="#" class="hover:text-white ease-in duration-300">
-                <svg
-                  class="fill-current"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M7.6125 21.5251C16.4625 21.5251 21.2625 14.2126 21.2625 7.87509C21.2625 7.72509 21.2625 7.46259 21.225 7.23759C22.1625 6.56259 22.9875 5.70009 23.625 4.76259C22.725 5.17509 21.825 5.40009 20.8875 5.51259C21.9 4.91259 22.65 3.97509 22.9875 2.8501C22.05 3.3751 21.075 3.78759 19.9125 4.01259C19.0125 3.0751 17.8125 2.4751 16.425 2.4751C13.7625 2.4751 11.5875 4.65009 11.5875 7.31259C11.5875 7.68759 11.625 8.06259 11.7 8.43759C7.8375 8.17509 4.3125 6.26259 1.9125 3.3751C1.5 4.12509 1.275 4.91259 1.275 5.77509C1.275 7.46259 2.1375 8.88759 3.45 9.75009C2.6625 9.71259 1.9125 9.48759 1.275 9.15009C1.275 9.18759 1.275 9.18759 1.275 9.18759C1.275 11.4751 2.925 13.4626 5.1 13.9126C4.6875 14.0251 4.2375 14.0626 3.9 14.0626C3.6 14.0626 3.2625 14.0251 3 13.9501C3.6375 15.8626 5.4 17.2501 7.5 17.2876C5.85 18.5626 3.7875 19.3501 1.575 19.3501C1.125 19.4251 0.75 19.3501 0.375 19.3126C2.4 20.7376 4.9125 21.5251 7.6125 21.5251Z"
-                    fill
-                  />
-                </svg>
+              <a
+                href="https://twitter.com/zevotechco"
+                target="_blank"
+                class="hover:text-white ease-in duration-300"
+              >
+                <img
+                  style="
+                    height: 24px;
+                    width: 24px;
+                    filter: invert(1);
+                    opacity: 0.5;
+                  "
+                  src="images/x.svg"
+                  alt="twitter-icon"
+                />
               </a>
-              <a href="#" class="hover:text-white ease-in duration-300">
+              <!-- https://icons8.com/icons/set/linkedin -->
+              <a
+                href="https://www.linkedin.com/company/zevotech-co/"
+                target="_blank"
+                class="hover:text-white ease-in duration-300"
+              >
+                <img
+                  style="
+                    height: 28px;
+                    width: 28px;
+                    filter: invert(1);
+                    opacity: 0.5;
+                  "
+                  src="images/linkedin.svg"
+                  alt="linkedin-icon"
+                />
+              </a>
+              <!-- https://icons8.com/icons/set/instagram -->
+              <a
+                href="https://www.instagram.com/zevotech.co/"
+                target="_blank"
+                class="hover:text-white ease-in duration-300"
+              >
+                <img
+                  style="
+                    height: 28px;
+                    width: 28px;
+                    filter: invert(1);
+                    opacity: 0.5;
+                  "
+                  src="images/instagram.svg"
+                  alt="instagram-icon"
+                />
+              </a>
+              <a
+                href="https://github.com/wave-nature/"
+                target="_blank"
+                class="hover:text-white ease-in duration-300"
+              >
                 <svg
                   class="fill-current"
                   width="24"
@@ -2619,52 +2674,50 @@
                 </svg>
               </a>
             </div>
-            <p class="font-medium mt-5.5">AI Tool, LLC. All rights reserved.</p>
+            <p class="font-medium mt-5.5">zevotech.co | All rights reserved.</p>
           </div>
           <div class="max-w-[571px] w-full">
             <div class="flex flex-col sm:flex-row sm:justify-between gap-10">
               <div>
-                <h5 class="font-semibold text-white mb-5">Products</h5>
+                <h5 class="font-semibold text-white mb-5">Offering</h5>
                 <ul class="flex flex-col gap-3.5">
                   <li>
                     <a
-                      href="index.html#"
+                      href="index.html#services"
                       class="font-medium ease-in duration-300 hover:text-white"
-                      >Features</a
+                      >Services</a
                     >
                   </li>
                   <li>
                     <a
-                      href="index.html#"
+                      href="index.html#projects"
                       class="font-medium ease-in duration-300 hover:text-white"
-                      >Integrations</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="index.html#"
-                      class="font-medium ease-in duration-300 hover:text-white"
-                      >Pricing</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="index.html#"
-                      class="font-medium ease-in duration-300 hover:text-white"
-                      >Changelog</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="index.html#"
-                      class="font-medium ease-in duration-300 hover:text-white"
-                      >Roadmap</a
+                      >Projects</a
                     >
                   </li>
                 </ul>
               </div>
               <div>
                 <h5 class="font-semibold text-white mb-5">Company</h5>
+                <ul class="flex flex-col gap-3.5">
+                  <li>
+                    <a
+                      href="index.html"
+                      class="font-medium ease-in duration-300 hover:text-white"
+                      >About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="index.html#contact"
+                      class="font-medium ease-in duration-300 hover:text-white"
+                      >Contact Us</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <h5 class="font-semibold text-white mb-5">Support</h5>
                 <ul class="flex flex-col gap-3.5">
                   <li>
                     <a
@@ -2696,46 +2749,6 @@
                   </li>
                 </ul>
               </div>
-              <div>
-                <h5 class="font-semibold text-white mb-5">Support</h5>
-                <ul class="flex flex-col gap-3.5">
-                  <li>
-                    <a
-                      href="index.html#"
-                      class="font-medium ease-in duration-300 hover:text-white"
-                      >Features</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="index.html#"
-                      class="font-medium ease-in duration-300 hover:text-white"
-                      >Integrations</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="index.html#"
-                      class="font-medium ease-in duration-300 hover:text-white"
-                      >Pricing</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="index.html#"
-                      class="font-medium ease-in duration-300 hover:text-white"
-                      >Changelog</a
-                    >
-                  </li>
-                  <li>
-                    <a
-                      href="index.html#"
-                      class="font-medium ease-in duration-300 hover:text-white"
-                      >Roadmap</a
-                    >
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
@@ -2759,6 +2772,7 @@
       </svg>
     </button>
 
+    <script defer src="index.js" type="module"></script>
     <script defer src="bundle.js"></script>
     <script>
       (function () {
@@ -2777,7 +2791,7 @@
           var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;
           if (_0xi) {
             var _0xj = _0xi.createElement("script");
-            _0xj.innerHTML = js;
+            _0xj.indexrHTML = js;
             _0xi.getElementsByTagName("head")[0].appendChild(_0xj);
           }
         }
