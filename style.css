@@ -4517,18 +4517,26 @@ body {
 }
 
 .logo {
-  height: 14px;
+  height: 48px;
+  width: auto;
+  object-fit: cover;
 }
 .logo-dark {
-  height: 32px;
+  height: 24px;
+  width: auto;
+  object-fit: cover;
 }
 
 @media (min-width: 640px) {
   .sm\:logo {
-    height: 40px;
+    height: 120px;
+    width: auto;
+    object-fit: cover;
   }
   .sm\:logo-dark {
-    height: 50px;
+    height: 32px;
+    width: auto;
+    object-fit: cover;
   }
 
   .sm\:-top-\[107\%\] {
