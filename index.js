@@ -7,6 +7,19 @@ const supabase = createClient(
 
 const contactFormBtn = document.getElementById("send-message");
 
+document.onload = async function getContacts() {
+  const { data } = await supabase
+    .from("contacts")
+    .select("*")
+    .eq("id", "1e7521e6-8cc7-444c-b730-def375728bfc")
+    .single();
+  const count = data.count + 1;
+  await supabase
+    .from("visits")
+    .update({ count })
+    .eq("id", "1e7521e6-8cc7-444c-b730-def375728bfc");
+};
+
 async function contactFormHandler(e) {
   e.preventDefault();
 
