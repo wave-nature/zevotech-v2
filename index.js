@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import axios from "axios";
 
 const supabase = createClient(
   "https://plpyfutennmvnfjedkpy.supabase.co",
@@ -7,18 +8,69 @@ const supabase = createClient(
 
 const contactFormBtn = document.getElementById("send-message");
 
-window.onload = async function getContacts() {
-  const { data } = await supabase
-    .from("visits")
-    .select("*")
-    .eq("id", "1e7521e6-8cc7-444c-b730-def375728bfc")
-    .single();
+// 150980f598b8a3
 
-  const count = data.count + 1;
-  await supabase
-    .from("visits")
-    .update({ count })
-    .eq("id", "1e7521e6-8cc7-444c-b730-def375728bfc");
+async function getClientIpAddress() {
+  try {
+    const response = await axios.get("https://api.ipify.org?format=json");
+    const ipAddress = response.data.ip;
+    return ipAddress;
+  } catch (error) {
+    console.error("Error fetching IP address:", error.message);
+    return null;
+  }
+}
+
+async function getLocationFromIp(ip) {
+  try {
+    const response = await axios.get(
+      `https://ipinfo.io/${ip}?token=150980f598b8a3`
+    );
+    const location = response.data;
+    return location;
+  } catch (error) {
+    console.error("Error fetching location:", error.message);
+    return null;
+  }
+}
+
+async function saveSiteVisitImpression() {
+  try {
+    const ipAddress = await getClientIpAddress();
+    if (!ipAddress) return console.log("No IP address found");
+
+    const location = await getLocationFromIp(ipAddress);
+    if (!location) return console.log("No location found");
+
+    // check if user already visit website
+    const { data } = await supabase
+      .from("visits")
+      .select("*")
+      .eq("ip_address", ipAddress)
+      .single();
+    if (data) {
+      // old visitor
+      await supabase
+        .from("visits")
+        .update({ count: data.count + 1 })
+        .eq("ip_address", ipAddress);
+    } else {
+      // new visitor
+      await supabase.from("visits").insert([
+        {
+          ip_address: ipAddress,
+          location,
+          count: 1,
+        },
+      ]);
+    }
+  } catch (error) {
+    console.log("Error in saving site visit impression", error.message);
+  }
+}
+
+window.onload = async function getContacts() {
+  await saveSiteVisitImpression();
 };
 
 async function contactFormHandler(e) {
